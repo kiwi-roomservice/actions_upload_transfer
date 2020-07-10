@@ -43,10 +43,10 @@ jobs:
          env:
            GITHUB_TOKEN: ${{ secrets.PINKDOGE }}
          
-#       - name: Upload Rom to WeTransfer
-#         run: |
-#              curl -sL https://git.io/file-transfer | sh
-#             ./transfer wet ${{ steps.var.outputs.rom_from }}-${{ steps.var.outputs.and_ver }}_${{ steps.var.outputs.rom_ver }}-${{ steps.var.outputs.rom_origin }}_${{ steps.var.outputs.device_name }}_${{ steps.var.outputs.rom_author }}.zip
+       - name: Upload Rom to WeTransfer
+         run: |
+              curl -sL https://git.io/file-transfer | sh
+             ./transfer wet ${{ steps.var.outputs.rom_from }}-${{ steps.var.outputs.and_ver }}_${{ steps.var.outputs.rom_ver }}-${{ steps.var.outputs.rom_origin }}_${{ steps.var.outputs.device_name }}_${{ steps.var.outputs.rom_author }}.zip
 
 #       - name: Upload Rom to Bitsend
 #         run: ./transfer bit ${{ steps.var.outputs.rom_from }}-${{ steps.var.outputs.and_ver }}_${{ steps.var.outputs.rom_ver }}-${{ steps.var.outputs.rom_origin }}_${{ steps.var.outputs.device_name }}_${{ steps.var.outputs.rom_author }}.zip
